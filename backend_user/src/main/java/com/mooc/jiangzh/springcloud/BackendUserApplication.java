@@ -1,4 +1,4 @@
-package com.mooc.jiangzh.springcloud.user;
+package com.mooc.jiangzh.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
