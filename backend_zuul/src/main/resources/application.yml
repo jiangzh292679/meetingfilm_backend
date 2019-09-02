@@ -5,4 +5,13 @@ spring:
   application:
     name: zuul-service
 
+zuul:
+  prefix: "/meetingfilm/"
+  routes:
+    meetingfilm-user:
+      path: /user/**
+      serviceId: user-service
+      retryable: true
 
+logging:
+  config: classpath:logback.xml
