@@ -12,6 +12,7 @@
   <groupId>com.mooc.jiangzh.springcloud</groupId>
   <artifactId>meetingfilm-backend-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
   <name>meetingfilm-backend-parent</name>
   <description>慕课网MeetingFilm的后端程序</description>
 
