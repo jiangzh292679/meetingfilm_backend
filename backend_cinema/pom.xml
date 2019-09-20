@@ -10,10 +10,10 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.mooc.jiangzh.springcloud</groupId>
-  <artifactId>backend-eureka-server</artifactId>
+  <artifactId>backend-cinema</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>backend-eureka-server</name>
-  <description>Eureka Server环境构建</description>
+  <name>backend-cinema</name>
+  <description>Meetingfilm后台维护模块之影院模块</description>
 
   <properties>
     <java.version>1.8</java.version>
@@ -21,9 +21,10 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+      <groupId>com.mooc.jiangzh.springcloud</groupId>
+      <artifactId>backend-utils</artifactId>
     </dependency>
   </dependencies>
+
 
 </project>

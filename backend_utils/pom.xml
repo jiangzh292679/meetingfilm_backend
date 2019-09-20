@@ -12,6 +12,7 @@
   <groupId>com.mooc.jiangzh.springcloud</groupId>
   <artifactId>backend-utils</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <name>backend-utils</name>
   <description>Backend工具集合内容</description>
 
@@ -57,13 +58,6 @@
   </dependencies>
 
   <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-
     <!-- 资源引入 -->
     <resources>
       <resource>
