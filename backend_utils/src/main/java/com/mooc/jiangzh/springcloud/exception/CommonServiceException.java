@@ -1,4 +1,4 @@
-package com.mooc.jiangzh.springcloud.baseutils.common.exception;
+package com.mooc.jiangzh.springcloud.exception;
 
 import lombok.Data;
 

@@ -22,6 +22,10 @@
   <dependencies>
     <dependency>
       <groupId>com.mooc.jiangzh.springcloud</groupId>
+      <artifactId>backend-commons</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.mooc.jiangzh.springcloud</groupId>
       <artifactId>backend-utils</artifactId>
     </dependency>
   </dependencies>

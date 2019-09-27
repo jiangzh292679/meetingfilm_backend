@@ -12,71 +12,32 @@
   <groupId>com.mooc.jiangzh.springcloud</groupId>
   <artifactId>backend-utils</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
   <name>backend-utils</name>
-  <description>Backend工具集合内容</description>
+  <description>猫眼运营后台工具类</description>
 
   <properties>
     <java.version>1.8</java.version>
   </properties>
 
   <dependencies>
-    <!-- mybatis-plus依赖 -->
+    <!-- guava支持 -->
     <dependency>
-      <groupId>com.baomidou</groupId>
-      <artifactId>mybatis-plus-boot-starter</artifactId>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
     </dependency>
 
-    <!-- Druid引入 -->
+    <!-- JSON依赖 -->
     <dependency>
       <groupId>com.alibaba</groupId>
-      <artifactId>druid-spring-boot-starter</artifactId>
+      <artifactId>fastjson</artifactId>
     </dependency>
 
-    <!-- 数据源驱动 -->
+    <!-- JWT依赖 -->
     <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-    </dependency>
-
-    <!-- 代码生成器依赖 -->
-    <dependency>
-      <groupId>com.baomidou</groupId>
-      <artifactId>mybatis-plus-generator</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.ibeetl</groupId>
-      <artifactId>beetl</artifactId>
-    </dependency>
-
-    <!-- 日志框架依赖 -->
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt</artifactId>
     </dependency>
   </dependencies>
-
-  <build>
-    <!--<plugins>-->
-      <!--<plugin>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
-      <!--</plugin>-->
-    <!--</plugins>-->
-    <!-- 资源引入 -->
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-      <resource>
-        <directory>src/main/java</directory>
-        <includes>
-          <include>**/*.xml</include>
-        </includes>
-      </resource>
-    </resources>
-  </build>
 
 </project>

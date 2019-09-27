@@ -1,10 +1,12 @@
 package com.mooc.jiangzh.springcloud.user.controller;
 
-import com.mooc.jiangzh.springcloud.baseutils.common.exception.CommonServiceException;
-import com.mooc.jiangzh.springcloud.baseutils.common.response.BaseResponseVO;
-import com.mooc.jiangzh.springcloud.baseutils.utils.UUIDHelper;
+import com.google.common.collect.Maps;
+import com.mooc.jiangzh.springcloud.exception.CommonServiceException;
+import com.mooc.jiangzh.springcloud.response.BaseResponseVO;
 import com.mooc.jiangzh.springcloud.user.controller.vo.LoginUserVO;
 import com.mooc.jiangzh.springcloud.user.service.UserServiceAPI;
+import com.mooc.jiangzh.springcloud.utils.JwtTokenUtil;
+import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,13 +24,23 @@ public class UserController {
 
   @RequestMapping(value = "/login",method = RequestMethod.POST)
   public BaseResponseVO login(@RequestBody LoginUserVO loginUserVO){
-    String requestId = UUIDHelper.generUUID();
     try {
       userServiceAPI.login(loginUserVO.getUsername(),loginUserVO.getPassword());
-      return BaseResponseVO.success(requestId);
+
+      // 获取JWT的相关信息
+      JwtTokenUtil jwtTokenUtil = new JwtTokenUtil();
+
+      String randomKey = jwtTokenUtil.getRandomKey();
+      String jwtToken = jwtTokenUtil.generateToken(loginUserVO.getUsername(), randomKey);
+
+      Map<String,String> result = Maps.newHashMap();
+      result.put("randomKey",randomKey);
+      result.put("token",jwtToken);
+
+      return BaseResponseVO.success(result);
     } catch (CommonServiceException e) {
-      log.error("login service failture, requestId:{} , loginUserVO:{}, error:{}",requestId,loginUserVO, e);
-      return BaseResponseVO.serviceException(requestId,e);
+      log.error("login service failture, loginUserVO:{}, error:{}",loginUserVO, e);
+      return BaseResponseVO.serviceException(e);
     }
   }
 

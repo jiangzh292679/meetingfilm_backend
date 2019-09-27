@@ -1,7 +1,7 @@
 package com.mooc.jiangzh.springcloud.user.service;
 
 
-import com.mooc.jiangzh.springcloud.baseutils.common.exception.CommonServiceException;
+import com.mooc.jiangzh.springcloud.exception.CommonServiceException;
 
 public interface UserServiceAPI {
 

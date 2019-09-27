@@ -1,10 +1,10 @@
 package com.mooc.jiangzh.springcloud.user.dao;
 
 
-import com.mooc.jiangzh.springcloud.baseutils.utils.MD5Util;
 import com.mooc.jiangzh.springcloud.user.BackendUserApplicationTests;
 import com.mooc.jiangzh.springcloud.user.dao.entity.MoocBackendUserT;
 import com.mooc.jiangzh.springcloud.user.dao.mapper.MoocBackendUserTMapper;
+import com.mooc.jiangzh.springcloud.utils.MD5Util;
 import java.util.List;
 import javax.annotation.Resource;
 import org.junit.Test;

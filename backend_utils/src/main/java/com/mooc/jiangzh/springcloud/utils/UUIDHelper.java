@@ -1,4 +1,4 @@
-package com.mooc.jiangzh.springcloud.baseutils.utils;
+package com.mooc.jiangzh.springcloud.utils;
 
 
 import java.util.UUID;

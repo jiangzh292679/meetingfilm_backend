@@ -1,10 +1,10 @@
 package com.mooc.jiangzh.springcloud.user.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.mooc.jiangzh.springcloud.baseutils.common.exception.CommonServiceException;
-import com.mooc.jiangzh.springcloud.baseutils.utils.MD5Util;
+import com.mooc.jiangzh.springcloud.exception.CommonServiceException;
 import com.mooc.jiangzh.springcloud.user.dao.entity.MoocBackendUserT;
 import com.mooc.jiangzh.springcloud.user.dao.mapper.MoocBackendUserTMapper;
+import com.mooc.jiangzh.springcloud.utils.MD5Util;
 import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
