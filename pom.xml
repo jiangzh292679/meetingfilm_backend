@@ -21,6 +21,7 @@
     <module>backend_user</module>
     <module>backend_cinema</module>
     <module>backend_commons</module>
+    <module>backend_utils</module>
     <module>backend_eureka_server</module>
   </modules>
 
