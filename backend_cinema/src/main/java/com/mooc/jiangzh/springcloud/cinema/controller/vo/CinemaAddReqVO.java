@@ -43,6 +43,7 @@ public class CinemaAddReqVO extends BaseRequestVO {
 
   @Override
   public void checkParams() throws CommonServiceException {
-    // TODO
+    // TODO 验证品牌编号、区域编号在字典表中是否存在
+    // TODO 影厅类型编号格式是否为#号分割，以及编号在字典表中是否存在
   }
 }

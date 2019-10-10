@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date : 2019-09-27 17:55
  **/
 @RestController
-@RequestMapping(value = "/cinemas/")
+@RequestMapping(value = "/cinemas")
 public class CinemaController {
 
   @Autowired
@@ -44,7 +44,7 @@ public class CinemaController {
     return baseResponseVO;
   }
 
-  @RequestMapping(value = "/cinemalist", method = RequestMethod.GET)
+  @RequestMapping(value = "", method = RequestMethod.GET)
   public BaseResponseVO describeCinemas(
       @RequestParam(name = "nowPage", defaultValue = "1") int nowPage,
       @RequestParam(name = "pageSize", defaultValue = "10") int pageSize) {
