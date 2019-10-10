@@ -23,8 +23,9 @@ public class UserController {
   private UserServiceAPI userServiceAPI;
 
   @RequestMapping(value = "/login",method = RequestMethod.POST)
-  public BaseResponseVO login(@RequestBody LoginUserVO loginUserVO){
-    try {
+  public BaseResponseVO login(@RequestBody LoginUserVO loginUserVO) throws CommonServiceException{
+      loginUserVO.checkParams();
+
       userServiceAPI.login(loginUserVO.getUsername(),loginUserVO.getPassword());
 
       // 获取JWT的相关信息
@@ -38,10 +39,6 @@ public class UserController {
       result.put("token",jwtToken);
 
       return BaseResponseVO.success(result);
-    } catch (CommonServiceException e) {
-      log.error("login service failture, loginUserVO:{}, error:{}",loginUserVO, e);
-      return BaseResponseVO.serviceException(e);
-    }
   }
 
 }
