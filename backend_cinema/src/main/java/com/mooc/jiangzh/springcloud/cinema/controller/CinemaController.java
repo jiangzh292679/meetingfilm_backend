@@ -68,7 +68,7 @@ public class CinemaController {
             }).collect(Collectors.toList());
 
         result.put("cinemas", cinemas);
-        baseResponseVO = BaseResponseVO.success();
+        baseResponseVO = BaseResponseVO.success(result);
       }
     } catch (CommonServiceException e) {
       baseResponseVO = BaseResponseVO.serviceException(e);
