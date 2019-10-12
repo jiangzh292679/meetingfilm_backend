@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author : jiangzh
  * @program : com.mooc.jiangzh.springcloud.exception
  * @description : 统一异常处理
- * @date : 2019-10-10 13:56
  **/
 @Slf4j
 @ControllerAdvice

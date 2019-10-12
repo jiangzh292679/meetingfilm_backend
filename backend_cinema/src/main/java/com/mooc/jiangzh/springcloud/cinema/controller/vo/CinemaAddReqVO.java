@@ -9,7 +9,6 @@ import lombok.Data;
  * @author : jiangzh
  * @program : com.mooc.jiangzh.springcloud.cinema.controller.vo
  * @description : 添加Cinema的对象
- * @date : 2019-09-27 17:58
  **/
 @Data
 public class CinemaAddReqVO extends BaseRequestVO {

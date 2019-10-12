@@ -21,6 +21,10 @@ zuul:
       path: /cinemaapi/**
       serviceId: cinema-service
       retryable: true
+    meetingfilm-film:
+      path: /filmapi/**
+      serviceId: film-service
+      retryable: true
 
 logging:
   config: classpath:logback.xml

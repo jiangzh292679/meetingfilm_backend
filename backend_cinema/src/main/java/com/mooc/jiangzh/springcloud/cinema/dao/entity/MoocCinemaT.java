@@ -9,7 +9,6 @@ import java.io.Serializable;
  * </p>
  *
  * @author jiangzh
- * @since 2019-09-27
  */
 public class MoocCinemaT extends Model<MoocCinemaT> {
 

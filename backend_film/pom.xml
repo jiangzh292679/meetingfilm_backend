@@ -36,19 +36,29 @@
       <groupId>com.mooc.jiangzh.springcloud</groupId>
       <artifactId>backend-commons</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.mooc.jiangzh.springcloud</groupId>
-      <artifactId>backend-utils</artifactId>
-    </dependency>
   </dependencies>
 
   <build>
+    <finalName>backend_film</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
     </plugins>
+    <!-- 资源引入 -->
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+    </resources>
   </build>
 
 </project>

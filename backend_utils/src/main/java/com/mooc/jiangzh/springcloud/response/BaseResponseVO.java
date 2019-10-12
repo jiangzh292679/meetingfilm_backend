@@ -48,6 +48,13 @@ public class BaseResponseVO<M> {
     return baseResponseVO;
   }
 
+  public static<M> BaseResponseVO<M> systemException(Exception e){
+    BaseResponseVO baseResponseVO = new BaseResponseVO();
+    baseResponseVO.setCode(500);
+    baseResponseVO.setMessage(e.getMessage());
+
+    return baseResponseVO;
+  }
 
   public static<M> BaseResponseVO<M> noLogin(){
     BaseResponseVO baseResponseVO = new BaseResponseVO();

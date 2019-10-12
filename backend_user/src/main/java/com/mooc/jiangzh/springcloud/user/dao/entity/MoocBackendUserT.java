@@ -9,7 +9,6 @@ import java.io.Serializable;
  * </p>
  *
  * @author jiangzh
- * @since 2019-09-19
  */
 public class MoocBackendUserT extends Model<MoocBackendUserT> {
 

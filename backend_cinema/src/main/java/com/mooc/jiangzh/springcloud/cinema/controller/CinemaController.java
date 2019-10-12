@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @author : jiangzh
  * @program : com.mooc.jiangzh.springcloud.cinema.controller
  * @description : 影院相关的表现层
- * @date : 2019-09-27 17:55
  **/
 @RestController
 @RequestMapping(value = "/cinemas")

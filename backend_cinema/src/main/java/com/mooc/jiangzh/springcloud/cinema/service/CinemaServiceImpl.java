@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
  * @author : jiangzh
  * @program : com.mooc.jiangzh.springcloud.cinema.service
  * @description : 影院逻辑层实现
- * @date : 2019-09-27 18:05
  **/
 @Service
 public class CinemaServiceImpl implements CinemaServiceAPI{

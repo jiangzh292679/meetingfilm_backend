@@ -9,7 +9,6 @@ import com.mooc.jiangzh.springcloud.exception.CommonServiceException;
  * @author : jiangzh
  * @program : com.mooc.jiangzh.springcloud.cinema.service
  * @description : 影院模块逻辑层
- * @create : 2019-09-27 18:03
  **/
 public interface CinemaServiceAPI {
 
