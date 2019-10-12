@@ -17,6 +17,7 @@ public class CinemaAddReqVO extends BaseRequestVO {
   private Integer areaId;  // 区域编号
   private String hallTypeIds; // 影厅类型编号, 多个以#号分割
 
+  private String cinemaId;
   private String cinemaName; // 影院名称
   private String cinemaAddress; // 影院地址
   private String cinemaTele; // 影院电话
@@ -27,6 +28,7 @@ public class CinemaAddReqVO extends BaseRequestVO {
     CinemaAddReqVO cinemaAddReqVO = new CinemaAddReqVO();
 
     if(moocCinemaT !=null && moocCinemaT.getUuid() != null){
+      cinemaAddReqVO.setCinemaId(moocCinemaT.getUuid()+"");
       cinemaAddReqVO.setBrandId(moocCinemaT.getBrandId());
       cinemaAddReqVO.setAreaId(moocCinemaT.getAreaId());
       cinemaAddReqVO.setHallTypeIds(moocCinemaT.getHallIds());
