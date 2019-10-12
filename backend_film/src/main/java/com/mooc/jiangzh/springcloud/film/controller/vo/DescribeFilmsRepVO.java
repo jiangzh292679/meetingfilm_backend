@@ -10,6 +10,7 @@ import lombok.Data;
 @Data
 public class DescribeFilmsRepVO {
 
+  private String filmId;
   private String filmStatus;
   private String filmName;
   private String filmEnName;

@@ -21,6 +21,7 @@
 
     <select id="describeFilms" resultType="com.mooc.jiangzh.springcloud.film.controller.vo.DescribeFilmsRepVO">
        SELECT
+          film.`uuid` AS filmId,
           film.film_status AS filmStatus,
           film.film_name AS filmName,
           info.`film_en_name` AS filmEnName,
