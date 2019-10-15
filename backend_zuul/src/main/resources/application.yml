@@ -25,6 +25,10 @@ zuul:
       path: /filmapi/**
       serviceId: film-service
       retryable: true
+    meetingfilm-hall:
+      path: /hallapi/**
+      serviceId: hall-service
+      retryable: true
 
 logging:
   config: classpath:logback.xml
