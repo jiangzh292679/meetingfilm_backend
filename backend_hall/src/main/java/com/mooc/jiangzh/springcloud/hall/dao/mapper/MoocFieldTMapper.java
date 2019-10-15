@@ -17,4 +17,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 public interface MoocFieldTMapper extends BaseMapper<MoocFieldT> {
 
   IPage<HallsRespVO> describeHalls(Page<HallsRespVO> page);
+
 }

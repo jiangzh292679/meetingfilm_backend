@@ -85,9 +85,14 @@ public class HallServiceImpl implements HallServiceAPI{
 
   @Override
   public IPage<HallsRespVO> describeHalls(int nowPage, int pageSize) throws CommonServiceException {
-    // 查询影厅信息
-    Page<HallsRespVO> page = new Page<>(nowPage,pageSize);
+    try{
+      // 查询影厅信息
+      Page<HallsRespVO> page = new Page<>(nowPage,pageSize);
 
-    return fieldMapper.describeHalls(page);
+      return fieldMapper.describeHalls(page);
+    }catch (Exception e){
+      log.error("describeHalls exception e:{}",e);
+      throw new CommonServiceException(500, e.getMessage());
+    }
   }
 }
