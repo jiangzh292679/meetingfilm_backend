@@ -1,10 +1,10 @@
 package com.mooc.jiangzh.springcloud.film.dao.mapper;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.mooc.jiangzh.springcloud.film.controller.vo.DescribeFilmRepVO;
 import com.mooc.jiangzh.springcloud.film.controller.vo.DescribeFilmsRepVO;
 import com.mooc.jiangzh.springcloud.film.dao.entity.MoocFilmT;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mooc.jiangzh.springcloud.vo.DescribeFilmRepVO;
 import org.apache.ibatis.annotations.Param;
 
 /**

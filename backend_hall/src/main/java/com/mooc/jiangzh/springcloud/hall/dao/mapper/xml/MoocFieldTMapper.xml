@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mooc.jiangzh.springcloud.hall.dao.mapper.MoocFieldTMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mooc.jiangzh.springcloud.hall.dao.entity.MoocFieldT">
+        <id column="UUID" property="uuid" />
+        <result column="cinema_id" property="cinemaId" />
+        <result column="film_id" property="filmId" />
+        <result column="begin_time" property="beginTime" />
+        <result column="end_time" property="endTime" />
+        <result column="hall_id" property="hallId" />
+        <result column="hall_name" property="hallName" />
+        <result column="price" property="price" />
+    </resultMap>
+
+    <select id="describeHalls" resultType="com.mooc.jiangzh.springcloud.hall.controller.vo.HallsRespVO">
+        SELECT
+          cinema.`cinema_name`,
+          film.`film_name`,
+          halldict.`show_name`,
+          f.`begin_time`,
+          f.`end_time`,
+          f.`price`
+        FROM
+          mooc_field_t f,
+          mooc_cinema_t cinema,
+          mooc_film_t film,
+          mooc_hall_dict_t halldict
+        WHERE f.`cinema_id` = cinema.`UUID`
+          AND f.`film_id` = film.`UUID`
+          AND f.`hall_id` = halldict.`UUID`
+    </select>
+
+</mapper>

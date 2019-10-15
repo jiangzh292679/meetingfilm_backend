@@ -10,38 +10,32 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.mooc.jiangzh.springcloud</groupId>
-  <artifactId>backend-utils</artifactId>
+  <artifactId>backend-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>backend-utils</name>
-  <description>猫眼运营后台工具类</description>
+  <name>backend-api</name>
+  <description>公共API模块</description>
 
   <properties>
-    <java.version>1.8</java.version>
+
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
-    <!-- guava支持 -->
     <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>${guava.version}</version>
-    </dependency>
-
-    <!-- JSON依赖 -->
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-    </dependency>
-
-    <!-- JWT依赖 -->
-    <dependency>
-      <groupId>io.jsonwebtoken</groupId>
-      <artifactId>jjwt</artifactId>
+      <groupId>com.mooc.jiangzh.springcloud</groupId>
+      <artifactId>backend-utils</artifactId>
     </dependency>
   </dependencies>
+
+  <build>
+
+  </build>
 
 </project>

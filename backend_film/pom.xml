@@ -21,20 +21,12 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-openfeign</artifactId>
+      <groupId>com.mooc.jiangzh.springcloud</groupId>
+      <artifactId>backend-commons</artifactId>
     </dependency>
     <dependency>
       <groupId>com.mooc.jiangzh.springcloud</groupId>
-      <artifactId>backend-commons</artifactId>
+      <artifactId>backend-api</artifactId>
     </dependency>
   </dependencies>
 

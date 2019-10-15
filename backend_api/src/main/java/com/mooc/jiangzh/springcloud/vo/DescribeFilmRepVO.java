@@ -1,4 +1,4 @@
-package com.mooc.jiangzh.springcloud.film.controller.vo;
+package com.mooc.jiangzh.springcloud.vo;
 
 import lombok.Data;
 
