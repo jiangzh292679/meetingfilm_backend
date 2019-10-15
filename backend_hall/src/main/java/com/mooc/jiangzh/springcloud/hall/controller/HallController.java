@@ -35,6 +35,8 @@ public class HallController {
   @RequestMapping(value = "/halls:add", method = RequestMethod.POST)
   public BaseResponseVO addHall(@RequestBody HallReqVO hallVO) throws CommonServiceException {
 
+    hallVO.checkParams();
+
     hallServiceAPI.addHall(hallVO);
 
     return BaseResponseVO.success();
@@ -42,6 +44,8 @@ public class HallController {
 
   @RequestMapping(value = "/halls", method = RequestMethod.GET)
   public BaseResponseVO describeHalls(PageReqVO pageReqVO) throws CommonServiceException {
+
+    pageReqVO.checkParams();
 
     IPage<HallsRespVO> hallsRespVOIPage = hallServiceAPI
         .describeHalls(pageReqVO.getNowPage(), pageReqVO.getPageSize());
