@@ -14,6 +14,7 @@ public class HallsRespVO {
   private String cinemaName;
   private String filmName;
   private String hallTypeName;
+  private String hallName;
   private String beginTime;
   private String endTime;
   private String filmPrice;

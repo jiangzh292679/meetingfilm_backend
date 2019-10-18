@@ -19,6 +19,7 @@
           cinema.`cinema_name` AS cinemaName,
           film.`film_name` AS filmName,
           halldict.`show_name` AS hallTypeName,
+          f.`hall_name` AS hallName,
           f.`begin_time` AS beginTime,
           f.`end_time` AS endTime,
           f.`price` AS filmPrice
