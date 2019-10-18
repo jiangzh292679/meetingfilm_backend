@@ -19,5 +19,6 @@ public class DescribeFilmsRepVO {
   private String boxOffice;
   private String filmTime;
   private String filmLength;
+  private String mainImg;
 
 }

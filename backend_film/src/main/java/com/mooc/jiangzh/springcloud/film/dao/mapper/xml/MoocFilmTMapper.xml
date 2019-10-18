@@ -29,7 +29,8 @@
           film.`film_preSaleNum` AS preSaleNum,
           film.`film_box_office` AS boxOffice,
           film.`film_time` AS filmTime,
-          info.`film_length` AS filmLength
+          info.`film_length` AS filmLength,
+          film.`img_address` AS mainImg
         FROM
           mooc_film_t film LEFT JOIN mooc_film_info_t info ON film.`UUID` = info.`film_id`
     </select>
