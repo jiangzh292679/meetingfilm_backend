@@ -17,5 +17,6 @@ public class DescribeFilmRepVO {
   private String filmLanguage;
   private String actors;
   private String imgAddress;
+  private String subAddress;
 
 }
