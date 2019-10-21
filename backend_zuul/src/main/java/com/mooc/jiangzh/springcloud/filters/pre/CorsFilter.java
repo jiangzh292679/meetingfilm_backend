@@ -32,6 +32,7 @@ public class CorsFilter extends ZuulFilter {
     HttpServletResponse response = ctx.getResponse();
     response.addHeader("Access-Control-Allow-Origin", "*");
     response.setHeader("Access-Control-Allow-Methods", "*");
+    response.setHeader("Access-Control-Allow-Headers","authorization, content-type");
     response.setContentType("application/json");
     response.setCharacterEncoding("UTF-8");
     response.setContentType("text/html;charset=UTF-8");
