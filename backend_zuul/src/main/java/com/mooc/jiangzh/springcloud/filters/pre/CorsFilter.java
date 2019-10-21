@@ -3,6 +3,7 @@ package com.mooc.jiangzh.springcloud.filters.pre;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import javax.servlet.http.HttpServletResponse;
+import org.springframework.stereotype.Component;
 
 /**
  * @author : jiangzh
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  * @description : 解决跨域问题
  * @date : 2019-10-15 10:55
  **/
+@Component
 public class CorsFilter extends ZuulFilter {
 
   public String filterType() {
@@ -33,6 +35,7 @@ public class CorsFilter extends ZuulFilter {
     response.setContentType("application/json");
     response.setCharacterEncoding("UTF-8");
     response.setContentType("text/html;charset=UTF-8");
+
 
     return null;
   }
