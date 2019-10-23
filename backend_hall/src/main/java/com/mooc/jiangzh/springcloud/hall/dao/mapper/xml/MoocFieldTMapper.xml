@@ -31,6 +31,7 @@
         WHERE f.`cinema_id` = cinema.`UUID`
           AND f.`film_id` = film.`UUID`
           AND f.`hall_id` = halldict.`UUID`
+          ${ew.customSqlSegment}
     </select>
 
 </mapper>

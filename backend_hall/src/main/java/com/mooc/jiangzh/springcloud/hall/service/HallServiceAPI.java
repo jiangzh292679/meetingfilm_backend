@@ -15,6 +15,6 @@ public interface HallServiceAPI {
 
   void addHall(HallReqVO hallVO) throws CommonServiceException;
 
-  IPage<HallsRespVO> describeHalls(int nowPage, int pageSize) throws CommonServiceException;
+  IPage<HallsRespVO> describeHalls(int nowPage, int pageSize,String cinemaId) throws CommonServiceException;
 
 }

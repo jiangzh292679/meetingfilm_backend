@@ -1,5 +1,6 @@
 package com.mooc.jiangzh.springcloud.hall.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mooc.jiangzh.springcloud.exception.CommonServiceException;
@@ -84,12 +85,17 @@ public class HallServiceImpl implements HallServiceAPI{
   }
 
   @Override
-  public IPage<HallsRespVO> describeHalls(int nowPage, int pageSize) throws CommonServiceException {
+  public IPage<HallsRespVO> describeHalls(int nowPage, int pageSize,String cinemaId) throws CommonServiceException {
     try{
       // 查询影厅信息
       Page<HallsRespVO> page = new Page<>(nowPage,pageSize);
 
-      return fieldMapper.describeHalls(page);
+      QueryWrapper queryWrapper = new QueryWrapper();
+      if(ToolUtils.strIsNotNul(cinemaId)){
+        queryWrapper.eq("cinema_id", cinemaId);
+      }
+
+      return fieldMapper.describeHalls(page, queryWrapper);
     }catch (Exception e){
       log.error("describeHalls exception e:{}",e);
       throw new CommonServiceException(500, e.getMessage());

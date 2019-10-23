@@ -14,6 +14,7 @@ public class PageReqVO extends BaseRequestVO {
 
   private Integer nowPage;
   private Integer pageSize;
+  private String cinemaId;
 
   @Override
   public void checkParams() throws CommonServiceException {
