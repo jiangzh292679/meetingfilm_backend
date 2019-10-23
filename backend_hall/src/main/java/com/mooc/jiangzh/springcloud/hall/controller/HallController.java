@@ -48,7 +48,7 @@ public class HallController {
     pageReqVO.checkParams();
 
     IPage<HallsRespVO> hallsRespVOIPage = hallServiceAPI
-        .describeHalls(pageReqVO.getNowPage(), pageReqVO.getPageSize());
+        .describeHalls(pageReqVO.getNowPage(), pageReqVO.getPageSize(),pageReqVO.getCinemaId());
 
     Map<String,Object> result = PageResultHelper.getPageResult(hallsRespVOIPage,"actors");
 
